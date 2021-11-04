@@ -9,6 +9,13 @@ import string
 
 
 def current_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(("food-ginkgo.stg-myteksi.com", 443))
+    ip = s.getsockname()[0]
+    s.close()
+    return ip
+
+def current_ip_v0():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
     ip = s.getsockname()[0]

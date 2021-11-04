@@ -1,0 +1,256 @@
+[I 211101 15:34:04 heartbeat:137] WS receive: {"success": true, "id": "17a13cb0-3ae6-11ec-b0d8-0242ac150006"}
+[D 211101 15:53:39 heartbeat:98] WS read message: None
+[W 211101 15:53:39 heartbeat:101] WS closed
+[I 211101 15:53:59 heartbeat:137] WS receive: {"success": true, "id": "df9db746-3ae8-11ec-b0d8-0242ac150006"}
+[I 211101 15:53:59 heartbeat:104] WS receive message: None
+[I 211101 15:53:59 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})
+[D 211101 17:57:43 heartbeat:98] WS read message: None
+[W 211101 17:57:43 heartbeat:101] WS closed
+[W 211101 17:58:03 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 2s
+[W 211101 18:48:43 heartbeat:119] WS connect error: [Errno 60] Operation timed out, reconnect after 3s
+[W 211101 18:48:46 heartbeat:119] WS connect error: [Errno 51] Network is unreachable, reconnect after 4s
+[W 211101 18:49:10 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 5s
+[I 211101 18:49:20 heartbeat:137] WS receive: {"success": true, "id": "5e384720-3b01-11ec-b0d8-0242ac150006"}
+[I 211101 18:49:20 heartbeat:104] WS receive message: None
+[I 211101 18:49:20 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})
+WARNING:tornado.general:error on read: [Errno 65] No route to host
+[D 211101 21:31:24 heartbeat:98] WS read message: None
+[W 211101 21:31:24 heartbeat:101] WS closed
+[W 211102 07:32:24 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 2s
+[W 211102 08:00:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 3s
+[W 211102 09:01:48 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 4s
+[W 211102 09:02:13 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 5s
+[W 211102 09:02:38 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 6s
+[W 211102 09:03:04 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 7s
+[W 211102 09:03:31 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 8s
+[I 211102 09:03:39 heartbeat:137] WS receive: {"success": true, "id": "b7555ba0-3b78-11ec-b0d8-0242ac150006"}
+[I 211102 09:03:39 heartbeat:104] WS receive message: None
+[I 211102 09:03:39 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})
+[D 211102 14:45:12 heartbeat:98] WS read message: None
+[W 211102 14:45:12 heartbeat:101] WS closed
+[W 211102 14:45:32 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 2s
+[W 211102 14:45:55 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 3s
+[W 211102 14:59:21 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 4s
+[W 211102 14:59:44 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 5s
+[I 211102 14:59:51 heartbeat:137] WS receive: {"success": true, "id": "7b4635da-3baa-11ec-b0d8-0242ac150006"}
+[I 211102 14:59:51 heartbeat:104] WS receive message: None
+[I 211102 14:59:51 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})
+[D 211102 15:33:07 heartbeat:98] WS read message: None
+[W 211102 15:33:07 heartbeat:101] WS closed
+[W 211102 15:33:27 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 2s
+[I 211102 15:33:30 heartbeat:137] WS receive: {"success": true, "id": "2e4dc4e6-3baf-11ec-b0d8-0242ac150006"}
+[I 211102 15:33:30 heartbeat:104] WS receive message: None
+[I 211102 15:33:30 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})
+[D 211102 19:29:51 heartbeat:98] WS read message: None
+[W 211102 19:29:51 heartbeat:101] WS closed
+[W 211102 19:30:11 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 2s
+[W 211103 05:30:53 heartbeat:119] WS connect error: [Errno 60] Operation timed out, reconnect after 3s
+[W 211103 05:31:17 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 4s
+[W 211103 09:18:30 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 5s
+[W 211103 09:18:51 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 6s
+[W 211103 09:19:17 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 7s
+[W 211103 09:19:31 heartbeat:119] WS connect error: [Errno 65] No route to host, reconnect after 8s
+[W 211103 09:19:59 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 9s
+[W 211103 09:20:28 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 10s
+[W 211103 09:20:58 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 11s
+[W 211103 09:21:29 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 12s
+[W 211103 09:22:01 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 13s
+[W 211103 09:22:34 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 14s
+[W 211103 09:23:08 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 15s
+[W 211103 09:23:43 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 16s
+[W 211103 09:24:20 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 17s
+[W 211103 09:24:57 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 18s
+[W 211103 09:25:35 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 19s
+[W 211103 09:26:15 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 20s
+[I 211103 09:26:35 heartbeat:137] WS receive: {"success": true, "id": "186746d4-3c45-11ec-b0d8-0242ac150006"}
+[I 211103 09:26:35 heartbeat:104] WS receive message: None
+[I 211103 09:26:35 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})
+[D 211103 19:27:30 heartbeat:98] WS read message: None
+[W 211103 19:27:30 heartbeat:101] WS closed
+[W 211103 19:27:50 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 2s
+[W 211103 19:28:12 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 3s
+[W 211103 19:28:35 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 4s
+[W 211103 19:29:00 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 5s
+[W 211103 19:29:25 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 6s
+[W 211103 19:29:52 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 7s
+[W 211103 19:30:19 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 8s
+[W 211103 19:30:48 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 9s
+[W 211103 19:31:17 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 10s
+[W 211103 19:31:47 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 11s
+[W 211103 19:39:37 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 12s
+[W 211103 19:49:28 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 13s
+[W 211103 19:50:01 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 14s
+[W 211103 20:10:19 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 15s
+[W 211103 20:10:54 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 16s
+[W 211103 20:11:31 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 17s
+[W 211103 20:12:08 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 18s
+[W 211103 20:12:46 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 19s
+[W 211103 20:13:26 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 20s
+[W 211103 20:14:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 21s
+[W 211103 20:14:47 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 22s
+[W 211103 20:15:29 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 23s
+[W 211103 20:16:13 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 24s
+[W 211103 20:16:57 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 25s
+[W 211103 20:17:42 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 26s
+[W 211103 20:18:28 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 27s
+[W 211103 20:19:02 heartbeat:119] WS connect error: [Errno 65] No route to host, reconnect after 28s
+[W 211103 20:31:19 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 29s
+[W 211103 20:37:09 heartbeat:119] WS connect error: [Errno 65] No route to host, reconnect after 30s
+[W 211103 20:37:59 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[I 211103 20:38:31 heartbeat:137] WS receive: {"success": true, "id": "f4ff2f5a-3ca2-11ec-b0d8-0242ac150006"}
+[I 211103 20:38:31 heartbeat:104] WS receive message: None
+[I 211103 20:38:31 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})
+[D 211103 22:23:17 heartbeat:98] WS read message: None
+[W 211103 22:23:17 heartbeat:101] WS closed
+[W 211103 22:23:37 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 2s
+[W 211103 22:24:00 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 3s
+[W 211103 22:24:23 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 4s
+[W 211103 22:24:47 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 5s
+[W 211103 22:25:12 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 6s
+[W 211103 22:25:39 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 7s
+[W 211103 22:26:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 8s
+[W 211103 22:26:35 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 9s
+[W 211103 22:27:04 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 10s
+[W 211103 22:27:35 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 11s
+[W 211103 22:45:58 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 12s
+[W 211103 22:46:30 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 13s
+[W 211103 22:47:04 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 14s
+[W 211103 22:47:38 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 15s
+[W 211103 22:48:13 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 16s
+[W 211103 22:48:49 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 17s
+[W 211103 22:49:27 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 18s
+[W 211103 22:50:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 19s
+[W 211103 23:07:12 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 20s
+[W 211103 23:24:50 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 21s
+[W 211103 23:25:31 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 22s
+[W 211103 23:26:14 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 23s
+[W 211103 23:26:57 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 24s
+[W 211103 23:27:41 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 25s
+[W 211103 23:28:26 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 26s
+[W 211103 23:29:13 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 27s
+[W 211103 23:45:23 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 28s
+[W 211104 00:03:22 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 29s
+[W 211104 00:04:12 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 30s
+[W 211104 00:05:02 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:05:53 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:06:44 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:24:25 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:25:16 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:41:32 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:42:24 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:43:15 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:44:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 00:44:58 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:01:04 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:01:55 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:19:48 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:20:39 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:21:31 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:22:22 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:23:13 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:39:34 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:57:57 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:58:48 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 01:59:39 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:00:31 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:01:22 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:02:13 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:18:21 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:34:15 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:35:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:35:57 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:36:49 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:37:40 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:55:51 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 02:56:43 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:15:03 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:15:54 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:16:45 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:17:37 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:18:28 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:34:39 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:53:14 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:54:05 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:54:56 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:55:47 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:56:39 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 03:57:30 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:14:33 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:15:25 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:31:36 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:32:27 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:33:19 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:34:10 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:35:01 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:35:53 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 04:52:01 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:08:59 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:09:51 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:10:42 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:11:33 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:12:24 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:28:19 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:29:10 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:45:18 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:46:10 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:47:01 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:47:52 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 05:48:43 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:06:59 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:24:50 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:25:41 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:26:32 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:27:23 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:28:15 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:29:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 06:47:17 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:02:55 heartbeat:119] WS connect error: [Errno 60] Operation timed out, reconnect after 31s
+[W 211104 07:03:47 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:04:38 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:05:29 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:06:20 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:07:12 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:23:22 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:41:23 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:42:15 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:43:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:43:57 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:44:48 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:45:40 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:57:17 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 07:58:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:10:32 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:29:10 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:39:38 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:40:29 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:41:03 heartbeat:119] WS connect error: [Errno 65] No route to host, reconnect after 31s
+[W 211104 08:41:54 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:43:45 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:44:22 heartbeat:119] WS connect error: [Errno 65] No route to host, reconnect after 31s
+[W 211104 08:45:15 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:46:06 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:46:57 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:47:48 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:48:39 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:49:28 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:50:21 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:51:12 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:52:04 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:52:54 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 08:53:26 heartbeat:119] WS connect error: [Errno 65] No route to host, reconnect after 31s
+[W 211104 08:54:18 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:06:40 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:07:13 heartbeat:119] WS connect error: [Errno 65] No route to host, reconnect after 31s
+[W 211104 09:08:04 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:08:56 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:09:47 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:10:38 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:11:29 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:12:20 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:13:12 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:14:03 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:14:54 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[W 211104 09:15:48 heartbeat:119] WS connect error: Timeout while connecting, reconnect after 31s
+[I 211104 09:16:19 heartbeat:137] WS receive: {"success": true, "id": "d1001c1c-3d0c-11ec-b0d8-0242ac150006"}
+[I 211104 09:16:19 heartbeat:104] WS receive message: None
+[I 211104 09:16:19 heartbeat:78] Resent messages: defaultdict(<class 'dict'>, {})

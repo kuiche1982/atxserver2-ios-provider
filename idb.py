@@ -159,8 +159,14 @@ class WDADevice(object):
         self.product = udid2product(udid)
         self.wda_directory = "./ATX-WebDriverAgent"
         self._procs = []
+        self._cooldownProcs = []
         self._wda_proxy_port = None
         self._wda_proxy_proc = None
+        self._rtc_port = None
+        self._rtc_proc = None
+        self._appium_port = None
+        self._appium_proc = None
+        self._ginkgoagent_proc = None
         self._lock = lock  # only allow one xcodebuild test run
         self._finished = locks.Event()
         self._stop = locks.Event()
@@ -177,6 +183,14 @@ class WDADevice(object):
     @property
     def public_port(self):
         return self._wda_proxy_port
+    
+    @property
+    def appium_port(self):
+        return self._appium_port
+    
+    @property
+    def rtc_port(self):
+        return self._rtc_port
 
     def __repr__(self):
         return "[{udid}:{name}-{product}]".format(udid=self.udid[:5] + ".." +
@@ -244,6 +258,10 @@ class WDADevice(object):
         for p in self._procs:
             p.terminate()
         self._procs = []
+        for p in self._cooldownProcs:
+            p.terminate()
+        self._cooldownProcs = []
+        
 
     async def _sleep(self, timeout: float):
         """ return false when sleep stopped by _stop(Event) """
@@ -326,7 +344,10 @@ class WDADevice(object):
             elif self.use_tidevice:
                 # 明确使用 tidevice 命令启动 wda
                 logger.info("Got param --use-tidevice , use tidevice to launch wda")
-                tidevice_cmd = ['tidevice', '-u', self.udid, 'wdaproxy', '-B', self.wda_bundle_pattern, '--port', '0']
+                wda_bundle_name = subprocess.Popen("tidevice -u "+self.udid+" applist | grep "+self.wda_bundle_pattern.strip("*")+" | awk '{print $1}'", shell=True, stdout=subprocess.PIPE)
+                wda_bundle_name = wda_bundle_name.stdout.read().decode('utf-8').strip()
+                tidevice_cmd = ['tidevice', '-u', self.udid, 'wdaproxy', '-B', wda_bundle_name, '--port', '0']
+                print(tidevice_cmd)
                 self.run_background(tidevice_cmd, stdout=subprocess.DEVNULL,
                     stderr=subprocess.STDOUT)
             else:
@@ -336,6 +357,7 @@ class WDADevice(object):
 
             self._wda_port = freeport.get()
             self._mjpeg_port = freeport.get()
+            print("WDAPORT:", self.__udid, self._wda_port)
             self.run_background(
                 ["./iproxy.sh",
                  str(self._wda_port), "8100", self.udid],
@@ -344,7 +366,17 @@ class WDADevice(object):
                 ["./iproxy.sh",
                  str(self._mjpeg_port), "9100", self.udid],
                 silent=True)
-
+# # ./node_modules/.bin/irelay
+#             self.run_background(
+#                 ["./node_modules/.bin/irelay",
+#                  "--udid", self.udid,
+#                  "8100:%d"%(self._wda_port) ],
+#                 silent=False)
+#             self.run_background(
+#                 ["./node_modules/.bin/irelay",
+#                  "--udid", self.udid,
+#                  "9100:%d"%(self._mjpeg_port) ],
+#                 silent=False)
             self.restart_wda_proxy()
             return await self.wait_until_ready()
 
@@ -357,8 +389,9 @@ class WDADevice(object):
         self._procs.append(p)
 
     def restart_wda_proxy(self):
-        if self._wda_proxy_proc:
-            self._wda_proxy_proc.terminate()
+        for p in self._cooldownProcs:
+            p.terminate()
+        self._cooldownProcs = []
         self._wda_proxy_port = freeport.get()
         logger.debug("restart wdaproxy with port: %d", self._wda_proxy_port)
         self._wda_proxy_proc = subprocess.Popen([
@@ -367,6 +400,34 @@ class WDADevice(object):
             "--wda-url", "http://localhost:{}".format(self._wda_port),
             "--mjpeg-url", "http://localhost:{}".format(self._mjpeg_port)],
             stdout=subprocess.DEVNULL)  # yapf: disable
+        self._cooldownProcs.append(self._wda_proxy_proc)
+        #start rtc server
+        self._rtc_port = freeport.get()
+        self._rtc_proc = subprocess.Popen([
+            'rtcsrv', '-addr', ':'+str(self._rtc_port),
+            '-minicap', str(self._wda_proxy_port),
+            '-deviceid', self.__udid,
+            '-devicetype', "ios"
+        ]
+        # ,stdout=subprocess.DEVNULL
+        )
+        self._cooldownProcs.append(self._rtc_proc)
+
+        self._appium_port = freeport.get()
+        self._appium_proc = subprocess.Popen([
+            'appium', '-p', str(self._appium_port),
+            '-dc', '{"udid":"%s", "webDriverAgentUrl":"http://localhost:%s"}'%(self.__udid, self._wda_port)
+        ]
+        # ,stdout=subprocess.DEVNULL
+        )
+        self._cooldownProcs.append(self._appium_proc)
+
+        agentEnv = os.environ
+        agentEnv["APPIUM_SERVER_URL"] = "http://localhost:%d/wd/hub"%(self._appium_port)
+        self._ginkgoagent_proc = subprocess.Popen([
+            'python', 'deviceagent/Starter.py', '-k', 'testgroup', '-v', 'devicelab',  '-u', self.__udid
+        ], env=agentEnv)
+        self._cooldownProcs.append(self._ginkgoagent_proc)
 
     async def wait_until_ready(self, timeout: float = 60.0) -> bool:
         """

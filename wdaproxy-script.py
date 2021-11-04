@@ -96,7 +96,10 @@ class ScreenWSHandler(CorsMixin, WebSocketHandler):
         assert self.MJPEG_READER
 
         async for content in self.MJPEG_READER.aiter_content():
-            await self.write_message(content, binary=True)
+            try:
+                await self.write_message(content, binary=True)
+            except  Exception as ex:
+                print(ex)
 
     def on_message(self, message):
         # return super().on_message(message)

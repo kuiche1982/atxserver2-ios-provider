@@ -2,7 +2,9 @@ from __future__ import print_function
 
 import argparse
 import os
+import pprint
 import shutil
+import socket
 import subprocess
 import tempfile
 import time
@@ -26,7 +28,7 @@ from typing import Union
 
 idevices = {}
 hbc = None
-
+args =  None
 
 class CorsMixin(object):
     CORS_ORIGIN = '*'
@@ -78,12 +80,16 @@ class ColdingHandler(tornado.web.RequestHandler):
 
             d.restart_wda_proxy() # change wda public port
             wda_url = "http://{}:{}".format(current_ip(), d.public_port)
+            appium_url = "http://{}:{}".format(current_ip(), d.appium_port)
+            rtc_url = "{}:{}".format(current_ip(), d.rtc_port)
             await d.wda_healthcheck()
             await hbc.device_update({
                 "udid": udid,
                 "colding": False,
                 "provider": {
                     "wdaUrl": wda_url,
+                    "webrtc": rtc_url,
+                    "appiumUrl": appium_url,
                 }
             })
             self.write({
@@ -127,7 +133,8 @@ class AppInstallHandler(CorsMixin, tornado.web.RequestHandler):
                     tfile.write(chunk)
             else:
                 shutil.copyfileobj(r.raw, tfile)
-
+            tfile.flush()
+            
             p = subprocess.Popen(
                 ["ideviceinstaller", "-u", udid, "-i", ipa_path],
                 stdout=subprocess.PIPE,
@@ -201,18 +208,21 @@ async def _device_callback(d: idb.WDADevice,
 
         assert isinstance(info, dict)
         info = defaultdict(dict, info)
-
+        currentIP = current_ip()
         await hbc.device_update({
             # "colding": False,
             "udid": d.udid,
             "provider": {
-                "wdaUrl": "http://{}:{}".format(current_ip(), d.public_port)
+                "wdaUrl": "http://{}:{}".format(currentIP, d.public_port),
+                "webrtc": "{}:{}".format(currentIP, d.rtc_port),
+                "appiumUrl":"http://{}:{}".format(currentIP, d.appium_port)
             },
             "properties": {
                 "ip": info['value']['ios']['ip'],
                 "version": info['value']['os']['version'],
                 "sdkVersion": info['value']['os']['sdkVersion'],
-            }
+            },
+            "hostname": socket.gethostname(),
         })  # yapf: disable
     elif status == wd.status_fatal:
         await hbc.device_update({
@@ -281,9 +291,19 @@ async def async_main():
                         required=False,
                         help="If using --use-tidevice, can override wda bundle name pattern manually")
 
-
+    global args
     args = parser.parse_args()
-
+    if args.server == "localhost:4000":
+        r = requests.get("https://food-ginkgo.stg-myteksi.com/data/mobilelabserver.json")
+        try:
+            r.raise_for_status()
+        except requests.HTTPError:
+            pprint(r.text)
+            raise
+        print(dir(r))
+        server = r.text
+        args.server = server.strip()+":4000"
+        print("connec to remote: ", args.server)
     # start server
     enable_pretty_logging()
     app = make_app(debug=args.debug)
@@ -294,7 +314,7 @@ async def async_main():
     server_addr = args.server.replace("http://", "").replace("/", "")
     hbc = await heartbeat.heartbeat_connect(server_addr,
                                             platform='apple',
-                                            self_url=self_url)
+                                            self_url=self_url, args = args)
 
     await device_watch(args.wda_directory, args.manually_start_wda, args.use_tidevice, args.wda_bundle_pattern)
 

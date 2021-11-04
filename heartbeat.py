@@ -20,11 +20,14 @@ async def heartbeat_connect(server_url: str,
                             self_url: str = "",
                             secret: str = "",
                             platform: str = "android",
-                            priority: int = 2):
+                            priority: int = 2,
+                            args = []):
     addr = server_url.replace("http://", "").replace("/", "")
     url = "ws://" + addr + "/websocket/heartbeat"
     hbc = HeartbeatConnection(
         url, secret, platform=platform, priority=priority)
+    hbc.args = args
+    self_url = "http://{}:{}".format(current_ip(), args.port)
     hbc._provider_url = self_url
     await hbc.open()
     return hbc
@@ -120,13 +123,13 @@ class HeartbeatConnection(object):
     async def _connect(self):
         ws = await websocket.websocket_connect(self._ws_url, ping_interval=3)
         ws.__class__ = SafeWebSocket
-
+        self_url = "http://{}:{}".format(current_ip(), self.args.port)
         await ws.write_message({
             "command": "handshake",
             "name": self._name,
             "owner": self._owner,
             "secret": self._secret,
-            "url": self._provider_url,
+            "url": self_url,
             "priority": self._priority,  # the large the importanter
         })
 
